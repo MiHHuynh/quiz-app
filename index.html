@@ -5,30 +5,38 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/stylesheet.css"/> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/jquery.lettering-0.6.min.js"></script>
 </head>
 
 <body>
 	<!-- START PAGE -->
 	
 	<div class="startPage">
-		<h1 class="quizTitle">How much do you know about perfumes?</h1>
-		<img src="http://assets.wh.cdnds.net/images/182/perfume_bottle_-_155132748-2__medium_4x3.jpg"><br>
-		<button class="startButton">Start</button>
+		<div class="content">
+			<h1 class="quizTitle">Test your perfume knowledge!</h1>
+			<div class="buttonDiv"><button class="startButton">Start</button></div>		
+		</div>
+		<div class="background"></div>
 	</div>
 
 	<!-- QUESTION PAGE -->
 	
 	<div class="questionPage">
-		<h1 class="question">Here is a question?</h1>
-		<form class="choicesBox">
-			<label><input type="radio" class="choice" name="answer" value="choice 1"> Choice 1</label><br>
-			<label><input type="radio" class="choice" name="answer" value="choice 2"> Choice 2</label><br>
-			<label><input type="radio" class="choice" name="answer" value="choice 3"> Choice 3</label><br>
-			<label><input type="radio" class="choice" name="answer" value="choice 4"> Choice 4</label>
-		</form>
-		<span class="submit">SUBMIT?</span>
+		<div class="content">
+			<h1 class="question">Here is a question?</h1>
+			<form class="choicesBox">
+				<label><input type="radio" class="choice" name="answer" value="choice 1"> Choice 1</label><br>
+				<label><input type="radio" class="choice" name="answer" value="choice 2"> Choice 2</label><br>
+				<label><input type="radio" class="choice" name="answer" value="choice 3"> Choice 3</label><br>
+				<label><input type="radio" class="choice" name="answer" value="choice 4"> Choice 4</label>
+			</form>
+			<span class="submit">SUBMIT?</span>
+		</div>
+		<div class="background"></div>
 	</div>
 
 	<!-- QUESTION EXPLANATION PAGE -->
@@ -36,7 +44,7 @@
 	<div class="questionExplanation">
 		<h1 class="question">What is your favorite perfume?</h1>
 		<h3 class="feedback">Correct!/Incorrect!</h3>
-		<p class="explanation">LAKSJLKDJLKJLKJlkjalskdjf;lkj lkjdflksdjfl kjlskdfj lksdjflk jlskdf</p>
+		<p class="explanation">There isn't any super simple standardized way to set web type on a circle (or any kind of curve). But it can be done! We'll explore one way to do it here. But be forewarned, we're going to use some CSS3 and JavaScript and not give two hoots about older browsers that don't support some of the required tech. If you're interested in this for a real project, this kind of thing is probably still best served by and image with proper alt text, or proper feature detection which can flip out the image for this fancy technique in browsers that can handle it.</p>
 	</div>
 	
 	<!-- END PAGE -->

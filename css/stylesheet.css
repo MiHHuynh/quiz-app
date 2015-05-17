@@ -1,17 +1,82 @@
-.startPage {
+div, h1, img {
+/*	border: 1px solid red;*/
+}
+body {
+	background-image: url("file:///Users/MHH/Documents/Projects/Quiz-App/images/perfumebg.jpg");
+	background-size: cover;
+	background-repeat: none;
+	opacity: 50%;
+
+}
+.startPage, .content, .background {
+	width: 600px;
+	height: 500px;
+/*	background: -webkit-linear-gradient(white, #333333); /* For Safari 5.1 to 6.0 */
+/*	background: -o-linear-gradient(white, #333333); /* For Opera 11.1 to 12.0 */
+/*	background: -moz-linear-gradient(white, #333333); /* For Firefox 3.6 to 15 */
+/*	background: linear-gradient(white, #333333); /* Standard syntax */
+/*	opacity: 0.4;*/
+	text-align: center;
+	margin-left: auto;
+	margin-right: 5em;
+	margin-top: 100px;
+}
+.content {
+	z-index: 100;
+}
+.background {
+	position: absolute;
+    top: 0px; bottom: 0px; right: 0px; left: 0px;
+    background-color: white;
+    z-index: -100;
+    /* These three lines are for transparency in all browsers. */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    opacity: .2;
+}
+
+.startPage, .quizTitle, .startButton {
 	text-align: center;
 }
 
 .quizTitle {
+	width: 600px;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 2em;
+	font-weight: 500;
+	color: white;
+	padding-top: 1em;
 
 }
 
 .startButton {
+	text-shadow: none;
+	border-style: none;
+	border-radius: 3px;
+	padding: 16px 26px;
+	line-height: 1.33;
+	width: 100px;
+	font-size: 1.1em;
+	color: #ffffff;
+/*	background-color: #FF5930;*/
+	margin-top: .5em;
+	z-index: 99;
 
+
+}
+.buttonDiv {
+	position: relative;
+	top: 65%;
+    text-align: center;
+}
+.startButton:hover {
+	cursor: pointer;
+	background-color: #FF3300;
 }
 
 .questionPage {
 	text-align: center;
+	display: none;
 }
 
 .question {
@@ -26,3 +91,10 @@
 
 }
 
+.questionExplanation {
+	display: none;
+}
+
+.endingPage {
+	display: none;
+}
