@@ -8,14 +8,10 @@ body {
 	opacity: 50%;
 
 }
-.startPage, .content, .background {
+.startPage, .questionPage, .questionExplanation, .endingPage,
+.content, .background {
 	width: 600px;
 	height: 500px;
-/*	background: -webkit-linear-gradient(white, #333333); /* For Safari 5.1 to 6.0 */
-/*	background: -o-linear-gradient(white, #333333); /* For Opera 11.1 to 12.0 */
-/*	background: -moz-linear-gradient(white, #333333); /* For Firefox 3.6 to 15 */
-/*	background: linear-gradient(white, #333333); /* Standard syntax */
-/*	opacity: 0.4;*/
 	text-align: center;
 	margin-left: auto;
 	margin-right: 5em;
@@ -39,9 +35,12 @@ body {
 	text-align: center;
 }
 
-.quizTitle {
-	width: 600px;
+.quizTitle, .question, .choicesBox, .submit {
 	font-family: 'Julius Sans One', sans-serif;
+}
+
+.quizTitle, .question {
+	width: 600px;
 	font-size: 2em;
 	font-weight: 500;
 	color: white;
@@ -71,12 +70,12 @@ body {
 }
 .startButton:hover {
 	cursor: pointer;
-	background-color: #FF3300;
+	background-color: black;
 }
 
 .questionPage {
 	text-align: center;
-	display: none;
+
 }
 
 .question {
@@ -84,11 +83,44 @@ body {
 }
 
 .choicesBox{
-
+	width: 600px;
+	text-align: left;
+	margin-left: 30px;
 }
 
 .choice {
+/*	margin-left: 6em;*/
+	margin-top: 4em;
+}
 
+.submit {
+	float: right;
+}
+
+label {
+	color: white;
+	font-size: 1.2em;
+    display: block;
+    margin-left: 20px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+input {
+    float: left;
+    margin-left: -30px;
+    margin-right: 7px;
+    margin-bottom: 0px;
+	margin-top: 0px;
+    width: 25px;
+    height: 20px;
+}
+.choiceDiv {
+	width: 540px;
+	height: 100%;
+}
+
+.startPage {
+	display: none;
 }
 
 .questionExplanation {
