@@ -28,14 +28,15 @@ body {
     /* These three lines are for transparency in all browsers. */
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);
-    opacity: .2;
+    opacity: .3;
 }
 
 .startPage, .quizTitle, .startButton {
 	text-align: center;
 }
 
-.quizTitle, .question, .choicesBox, .submit {
+.quizTitle, .question, .choicesBox, .submit,
+.feedback, .explanation {
 	font-family: 'Julius Sans One', sans-serif;
 }
 
@@ -75,7 +76,7 @@ body {
 
 .questionPage {
 	text-align: center;
-
+	display: none;
 }
 
 .question {
@@ -85,7 +86,8 @@ body {
 .choicesBox{
 	width: 600px;
 	text-align: left;
-	margin-left: 30px;
+	margin-left: 42px;
+	margin-top: 25px;
 }
 
 .choice {
@@ -93,17 +95,38 @@ body {
 	margin-top: 4em;
 }
 
-.submit {
+.submit, .arrow {
 	float: right;
+}
+
+.submit {
+	padding-top: 3px;
+	padding-right: 7px;
+	font-size: 1.2em;
+	color: black;
+	font-weight: 1000;
+}
+
+.submit:hover {
+	color: white;
+}
+
+.arrow {
+	margin-right: 50px;
+}
+
+.arrow:hover {
+	color: white;
 }
 
 label {
 	color: white;
-	font-size: 1.2em;
     display: block;
     margin-left: 20px;
-    height: 80px;
+    height: 50px;
     margin-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 4px;
 }
 input {
     float: left;
@@ -124,7 +147,28 @@ input {
 }
 
 .questionExplanation {
-	display: none;
+
+}
+
+.submitButtonstuff {
+	float: right;
+	position: relative;
+	right: 0;
+	bottom: 0;
+}
+
+.feedback {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	color: white;
+	font-size: 1.5em;
+}
+
+.explanation {
+	width: 500px;
+	text-align: justify;
+	margin: auto;
+	color: black;
 }
 
 .endingPage {
