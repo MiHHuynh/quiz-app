@@ -2,7 +2,7 @@ div, h1, img {
 /*	border: 1px solid red;*/
 }
 body {
-	background-image: url("file:///Users/MHH/Documents/Projects/Quiz-App/images/perfumebg.jpg");
+	background-image: url("../images/perfumebg.jpg");
 	background-size: cover;
 	background-repeat: none;
 	opacity: 50%;
@@ -92,8 +92,6 @@ body {
 }
 
 .choice {
-/*	margin-left: 6em;*/
-	margin-top: 4em;
 }
 
 .submit, .arrow {
@@ -167,6 +165,8 @@ input {
 
 .explanation {
 	width: 500px;
+	height: 300px;
+	overflow: scroll;
 	text-align: justify;
 	margin: auto;
 	color: black;
