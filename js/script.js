@@ -36,11 +36,11 @@ question2.option4 = "Chanel No. 5";
 var question3 = new Question();
 question3.number = 3;
 question3.question = "What is the difference between Eau de Toilette and Eau de Parfum?";
-question3.answer = "";
-question3.option1 = "";
-question3.option2 = "";
-question3.option3 = "";
-question3.option4 = "";
+question3.answer = "All of the above.";
+question3.option1 = "The Eau de Toilette is less expensive than the Eau de Parfum.";
+question3.option2 = "The Eau de Toilette is less concentrated than the Eau de Parfum.";
+question3.option3 = "The Eau de Toilette sometimes smells slightly different from the Eau de Parfum.";
+question3.option4 = "All of the above.";
 
 var question4 = new Question();
 question4.number = 4;
