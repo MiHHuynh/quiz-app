@@ -3,6 +3,15 @@
 //populate fields with information from object
 //increment a counter for number correct
 
+$(document).ready(){
+	newQuiz();
+
+};
+
+function newQuiz(){
+	
+};
+
 //Create object constructor and declare all needed objects
 
 function Question(){
@@ -29,7 +38,7 @@ question2.number = 2;
 question2.question = "What fragrance was made popular with Marilyn Monroe's usage?";
 question2.answer = "Chanel No. 5";
 question2.option1 = "Jean Patou Joy";
-question2.option2 = "Vera Wang Princess";
+question2.option2 = "Yves Saint Laurent Opium";
 question2.option3 = "Guerlain Shalimar";
 question2.option4 = "Chanel No. 5";
 
@@ -53,9 +62,9 @@ question4.option4 = "Musk";
 
 var question5 = new Question();
 question5.number = 5;
-question5.question = "";
-question5.answer = "";
-question5.option1 = "";
-question5.option2 = "";
-question5.option3 = "";
-question5.option4 = "";
+question5.question = "What are the characteristic notes that make up a Chypre scent?";
+question5.answer = "Citrus, oakmoss, patchouli, musk";
+question5.option1 = "Sandalwood, cedar, patchouli";
+question5.option2 = "Lavender, coumarin, oakmoss";
+question5.option3 = "Citrus, oakmoss, patchouli, musk";
+question5.option4 = "Amber, vanilla, spices";
