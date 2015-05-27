@@ -3,6 +3,8 @@
 //populate fields with information from object
 //increment a counter for number correct
 
+//how to go from page to page?
+
 $(document).ready(){
 	newQuiz();
 
