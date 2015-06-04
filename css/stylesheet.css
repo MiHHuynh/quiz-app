@@ -1,25 +1,23 @@
-div, h1, img {
-/*	border: 1px solid red;*/
-}
 body {
 	background-image: url("../images/perfumebg.jpg");
 	background-size: cover;
 	background-repeat: none;
-	opacity: 50%;
-
 }
-.startPage, .questionPage, .questionExplanation, .endingPage,
-.content, .background {
+
+.page {
 	width: 600px;
 	height: 500px;
 	text-align: center;
 	margin-left: auto;
 	margin-right: 5em;
 	margin-top: 100px;
+	font-family: 'Julius Sans One', sans-serif;
 }
-.content {
+
+.title, .contentArea, .button {
 	z-index: 100;
 }
+
 .background {
 	position: absolute;
     top: 0px; bottom: 0px; right: 0px; left: 0px;
@@ -29,6 +27,22 @@ body {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);
     opacity: .3;
+}
+
+/* ^^^^^ CSS FOR FINAL HTML ^^^^^ */
+
+.startPage, .questionPage, .questionExplanation, .endingPage,
+.content, .background {
+	width: 600px;
+	height: 500px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: 5em;
+	margin-top: 100px;
+}
+
+.content {
+	z-index: 100;
 }
 
 .startPage, .quizTitle, .startButton {
@@ -46,7 +60,23 @@ body {
 	font-weight: 500;
 	color: white;
 	padding-top: 1em;
+}
 
+.feedback {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	color: white;
+	font-size: 1.5em;
+}
+
+/* REVAMPING HTML; NEED THIS */
+
+.title {
+	width: 600px;
+	font-size: 2em;
+	font-weight: 500;
+	color: white;
+	padding-top: 1em;
 }
 
 
@@ -80,10 +110,6 @@ body {
 	display: none;
 }
 
-.question {
-
-}
-
 .choicesBox{
 	width: 600px;
 	text-align: left;
@@ -104,17 +130,17 @@ body {
 	font-weight: 1000;
 }
 
-.submit:hover {
+/*.submit:hover {
 	color: white;
-}
+}*/
 
 .arrow {
 	margin-right: 50px;
 }
 
-.arrow:hover {
+/*.arrow:hover {
 	color: white;
-}
+}*/
 
 label {
 	color: white;
@@ -143,10 +169,6 @@ input {
 	display: none;
 }
 
-.questionExplanation {
-	
-}
-
 .submitButtonstuff {
 	float: right;
 	position: relative;
@@ -154,11 +176,8 @@ input {
 	bottom: 0;
 }
 
-.feedback {
-	margin-top: 25px;
-	margin-bottom: 25px;
-	color: white;
-	font-size: 1.5em;
+.questionExplanation {
+	display: none;
 }
 
 .explanation {
