@@ -10,6 +10,13 @@
 //next question button
 //indicate correct as NUMBER. easier than string match-checking
 //put all objects in an array. easier to loop through
+
+
+// questions:
+// how to make hover on submit + arrow white?
+
+
+
 var counter = 0;
 var correctCounter = 0;
 
