@@ -11,6 +11,7 @@
 //indicate correct as NUMBER. easier than string match-checking
 //put all objects in an array. easier to loop through
 var counter = 0;
+var correctCounter = 0;
 
 $(document).ready(function(){
 	newQuiz();
@@ -24,6 +25,8 @@ $(document).ready(function(){
 	});
 
 	$(".button").on("click", ".submitStuff", submitQuestion);
+	$(".button").on("click", ".nextQuestion", nextQuestion);
+	$(".button").on("click", ".restart", newQuiz);
 }); //end document ready
 
 function clearEverything(){
@@ -34,56 +37,88 @@ function clearEverything(){
 
 function newQuiz(){
 	clearEverything();
+	counter = 0;
+	correctCounter = 0;
 	$(".title").append("<h1 class=\"quizTitle\">Test your perfume knowledge!</h1>");
 	$(".button").append("<div class=\"buttonDiv\"><button class=\"startButton\">Start</button></div>")
 };
 
 function startButton(){
 	clearEverything();
-	var currentQuestion = new Question();
-	currentQuestion = questionArray[counter];
-	$(".title").append("<h1 class=\"question\">" + currentQuestion.question + "</h1>");
-	$(".contentArea").append("<form class=\"choicesBox\">" + 
-			"<div class=\"choiceDiv\"><label><input type=\"radio\" class=\"choice\" name=\"answer\" value=\"1\">" 
-			+ currentQuestion.option1 + "</label></div>" + "<br>" + 
+	if (counter > 4){
+		endingPage();
+	}
+	else {
+		var currentQuestion = new Question();
+		currentQuestion = questionArray[counter];
+		$(".title").append("<h1 class=\"question\">" + currentQuestion.question + "</h1>");
+		$(".contentArea").append("<form class=\"choicesBox\">" + 
+				"<div class=\"choiceDiv\"><label><input type=\"radio\" class=\"choice\" name=\"answer\" value=\"1\">" 
+				+ currentQuestion.option1 + "</label></div>" + "<br>" + 
 
-			"<div class=\"choiceDiv\"><label><input type=\"radio\" class=\"choice\" name=\"answer\" value=\"2\">"
-			+ currentQuestion.option2 + "</label></div>" + "<br>" +
+				"<div class=\"choiceDiv\"><label><input type=\"radio\" class=\"choice\" name=\"answer\" value=\"2\">"
+				+ currentQuestion.option2 + "</label></div>" + "<br>" +
 
-			"<div class=\"choiceDiv\"><label><input type=\"radio\" class=\"choice\" name=\"answer\" value=\"3\">"
-			+ currentQuestion.option3 + "</label></div>" + "<br>" +
+				"<div class=\"choiceDiv\"><label><input type=\"radio\" class=\"choice\" name=\"answer\" value=\"3\">"
+				+ currentQuestion.option3 + "</label></div>" + "<br>" +
 
-			"<div class=\"choiceDiv\"><label><input type=\"radio\" class=\"choice\" name=\"answer\" value=\"4\">"
-			+ currentQuestion.option4 + "</label></div>" + 
-	"</form>" );
+				"<div class=\"choiceDiv\"><label><input type=\"radio\" class=\"choice\" name=\"answer\" value=\"4\">"
+				+ currentQuestion.option4 + "</label></div>" + 
+		"</form>" );
 
-	$(".button").append(
-		"<div class=\"submitStuff\">" + 
-			"<div class=\"arrow\"><i class=\"fa fa-arrow-circle-right fa-2x\"></i></div>" + 
-			"<div class=\"submit\"><span class=\"submit\">SUBMIT?</span></div>" +
-		"</div>"
-	);
-	$(".button").css("float", "right");
-	$(".submitStuff").css("float", "right");
+		$(".button").append(
+			"<div class=\"submitStuff\">" + 
+				"<div class=\"arrow\"><i class=\"fa fa-arrow-circle-right fa-2x\"></i></div>" + 
+				"<div class=\"submit\"><span class=\"submit\">SUBMIT?</span></div>" +
+			"</div>"
+		);
+		$(".button").css("float", "right");
+		$(".submitStuff").css("float", "right");		
+	};
 };
 
 function submitQuestion(){
+	var chosenAnswer = $("input:radio[name=answer]:checked").val();
 	clearEverything();
-	var currentQuestion = new Question();
-	currentQuestion = questionArray[counter];
-	$(".title").append("<h1 class=\"question\">" + currentQuestion.question + "</h1>");
-	$(".contentArea").append("");
-	$(".button").append(
-		"<div class=\"nextQuestion\">" + 
-			"<div class=\"arrow\"><i class=\"fa fa-arrow-circle-right fa-2x\"></i></div>" + 
-			"<div class=\"submit\"><span class=\"submit\">NEXT QUESTION?</span></div>" +
-		"</div>"
-	);
-	counter++;
+	if (counter > 4){
+		endingPage();
+	}
+	else {
+		var currentQuestion = new Question();
+		currentQuestion = questionArray[counter];
+		$(".title").append("<h1 class=\"question\">" + currentQuestion.question + "</h1>");
+		if (chosenAnswer == currentQuestion.answer){
+			correctCounter++;
+			$(".title").append("<h3 class=\"feedback\">Correct!</h3>");
+		}
+		else {
+			$(".title").append("<h3 class=\"feedback\">Incorrect!</h3>");
+		};
+		//$(".contentArea").append("");
+		$(".button").append(
+			"<div class=\"nextQuestion\">" + 
+				"<div class=\"arrow\"><i class=\"fa fa-arrow-circle-right fa-2x\"></i></div>" + 
+				"<div class=\"submit\"><span class=\"submit\">NEXT QUESTION?</span></div>" +
+			"</div>"
+		);
+		counter++;
+	}; //end else
 };
 
 function nextQuestion(){
+	if (counter == 4){
+		endingPage();
+	}
+	else {
+		startButton();
+	};
+};
 
+function endingPage(){
+	clearEverything();
+	$(".contentArea").append("<h1 class=\"score\">You got " 
+		+ correctCounter + " out of 5 correct!</h1>");
+	$(".button").append("<button class=\"restart\">Try Again?</button>");
 };
 
 //Create object constructor and declare all needed objects
