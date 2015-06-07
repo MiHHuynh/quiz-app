@@ -47,7 +47,8 @@ function newQuiz(){
 	counter = 0;
 	correctCounter = 0;
 	$(".title").append("<h1 class=\"quizTitle\">Test your perfume knowledge!</h1>");
-	$(".button").append("<div class=\"buttonDiv\"><button class=\"startButton\">Start</button></div>")
+	$(".button").append("<button class=\"startButton\">Start</button>");
+	$(".button").css("float", "none");
 };
 
 function startButton(){
@@ -101,7 +102,7 @@ function submitQuestion(){
 		else {
 			$(".title").append("<h3 class=\"feedback\">Incorrect!</h3>");
 		};
-		//$(".contentArea").append("");
+		$(".contentArea").append("<div class=\"explanation\">" + currentQuestion.explanation + "</div>");
 		$(".button").append(
 			"<div class=\"nextQuestion\">" + 
 				"<div class=\"arrow\"><i class=\"fa fa-arrow-circle-right fa-2x\"></i></div>" + 
@@ -125,6 +126,7 @@ function endingPage(){
 	clearEverything();
 	$(".contentArea").append("<h1 class=\"score\">You got " 
 		+ correctCounter + " out of 5 correct!</h1>");
+	$(".button").css("float", "none");
 	$(".button").append("<button class=\"restart\">Try Again?</button>");
 };
 
@@ -146,6 +148,7 @@ question1.option1 = "Guerlain";
 question1.option2 = "Houbigant";
 question1.option3 = "Chanel";
 question1.option4 = "Dior";
+question1.explanation = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
 var question2 = new Question();
 question2.answer = 4;
@@ -154,6 +157,7 @@ question2.option1 = "Jean Patou Joy";
 question2.option2 = "Yves Saint Laurent Opium";
 question2.option3 = "Guerlain Shalimar";
 question2.option4 = "Chanel No. 5";
+question2.explanation = "";
 
 var question3 = new Question();
 question3.answer = 4;
@@ -162,6 +166,7 @@ question3.option1 = "The Eau de Toilette is less expensive than the Eau de Parfu
 question3.option2 = "The Eau de Toilette is less concentrated than the Eau de Parfum.";
 question3.option3 = "The Eau de Toilette sometimes smells slightly different from the Eau de Parfum.";
 question3.option4 = "All of the above.";
+question3.explanation = "";
 
 var question4 = new Question();
 question4.answer = 1;
@@ -170,6 +175,7 @@ question4.option1 = "Oud";
 question4.option2 = "Castoreum";
 question4.option3 = "Ambergris";
 question4.option4 = "Musk";
+question4.explanation = "";
 
 var question5 = new Question();
 question5.answer = 3;
@@ -178,6 +184,7 @@ question5.option1 = "Sandalwood, cedar, patchouli";
 question5.option2 = "Lavender, coumarin, oakmoss";
 question5.option3 = "Citrus, oakmoss, patchouli, musk";
 question5.option4 = "Amber, vanilla, spices";
+question5.explanation = "";
 
 var questionArray = new Array();
 questionArray[0] = question1;

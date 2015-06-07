@@ -18,6 +18,25 @@ body {
 	z-index: 100;
 }
 
+.title {
+	width: 100%;
+	height: 70px;
+}
+
+.contentArea {
+	width: 100%;
+	height: 350px;
+}
+
+.button {
+	width: 100%;
+	height: 50px;
+}
+
+.startButton {
+	margin-bottom: 1em;
+}
+
 .background {
 	position: absolute;
     top: 0px; bottom: 0px; right: 0px; left: 0px;
@@ -31,8 +50,7 @@ body {
 
 /* ^^^^^ CSS FOR FINAL HTML ^^^^^ */
 
-.startPage, .questionPage, .questionExplanation, .endingPage,
-.content, .background {
+.background {
 	width: 600px;
 	height: 500px;
 	text-align: center;
@@ -41,25 +59,33 @@ body {
 	margin-top: 100px;
 }
 
-.content {
-	z-index: 100;
-}
-
-.startPage, .quizTitle, .startButton {
+.quizTitle, .startButton {
 	text-align: center;
 }
 
 .quizTitle, .question, .choicesBox, .submit,
-.feedback, .explanation, .score, .endingPage {
+.feedback, .explanation, .score, {
 	font-family: 'Julius Sans One', sans-serif;
 }
 
 .quizTitle, .question {
 	width: 600px;
-	font-size: 2em;
 	font-weight: 500;
 	color: white;
+}
+
+.question {
+	padding-top: 20px;
+}
+
+.quizTitle {
+	font-size: 2em;
 	padding-top: 1em;
+}
+
+.button:hover {
+	cursor: pointer;
+	color: white;
 }
 
 .feedback {
@@ -69,14 +95,11 @@ body {
 	font-size: 1.5em;
 }
 
-/* REVAMPING HTML; NEED THIS */
-
 .title {
 	width: 600px;
 	font-size: 2em;
 	font-weight: 500;
 	color: white;
-	padding-top: 1em;
 }
 
 
@@ -89,25 +112,15 @@ body {
 	width: 100px;
 	font-size: 1.1em;
 	color: #ffffff;
-/*	background-color: #FF5930;*/
 	margin-top: .5em;
 	z-index: 99;
-
-
-}
-.buttonDiv {
 	position: relative;
-	top: 65%;
     text-align: center;
 }
+
 .startButton:hover {
 	cursor: pointer;
 	background-color: black;
-}
-
-.questionPage {
-	text-align: center;
-	display: none;
 }
 
 .choicesBox{
@@ -115,6 +128,7 @@ body {
 	text-align: left;
 	margin-left: 42px;
 	margin-top: 25px;
+	padding-top: 30px;
 }
 
 
@@ -126,21 +140,12 @@ body {
 	padding-top: 3px;
 	padding-right: 7px;
 	font-size: 1.2em;
-	color: black;
 	font-weight: 1000;
 }
-
-/*.submit:hover {
-	color: white;
-}*/
 
 .arrow {
 	margin-right: 50px;
 }
-
-/*.arrow:hover {
-	color: white;
-}*/
 
 label {
 	color: white;
@@ -151,6 +156,7 @@ label {
     padding-top: 10px;
     margin-top: 4px;
 }
+
 input {
     float: left;
     margin-left: -30px;
@@ -160,24 +166,17 @@ input {
     width: 25px;
     height: 20px;
 }
+
 .choiceDiv {
 	width: 540px;
 	height: 100%;
 }
 
-.startPage {
-	display: none;
-}
-
-.submitButtonstuff {
+.submitStuff {
 	float: right;
 	position: relative;
 	right: 0;
 	bottom: 0;
-}
-
-.questionExplanation {
-	display: none;
 }
 
 .explanation {
@@ -187,6 +186,7 @@ input {
 	text-align: justify;
 	margin: auto;
 	color: black;
+	display: block;
 }
 
 .score {
@@ -194,8 +194,6 @@ input {
 	font-size: 2em;
 	font-weight: 500;
 	color: white;
-	padding-top: 1em;
-	margin-top: 40%;
 }
 
 .restart {
@@ -207,15 +205,9 @@ input {
 	width: 150px;
 	font-size: 1.1em;
 	color: #ffffff;
-/*	background-color: #FF5930;*/
-	margin-top: 4em;
 	z-index: 99;
 }
 
 .restart:hover {
 	background-color: black;
-}
-
-.endingPage {
-	display: none;
 }
